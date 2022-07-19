@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checking_Weight(height, weight) {
+            this.Height = height;
+            this.Weight = weight;
+            this.minWeight;
+            this.maxWeight;
+        }
+        checking_Weight.prototype.getInfo = function() {
+            var str = ""
+            str += "키: " + this.Height + ", ";
+            str += "몸무게: " + this.Weight + "<br>";
+            return str;
+        }
+        checking_Weight.prototype.getResult = function( ) {
+            this.minWeight = (this.Height - 100) * 0.9 - 5;
+            this.maxWeight = (this.Height - 100) * 0.9 + 5;
+            if(this.Weight >= this.minWeight && this.Weight <= this.maxWeight) {
+                return "정상 몸무게";
+            } else if(this.userWeight < this.minWeight) {
+                return "미달 몸무게";
+            } else {
+                return "초과 몸무게";
+            }
+        }   
+        var result1 = new checking_Weight(178, 72);
+        var result2 = new checking_Weight(190, 98);
+        console.log(result1);
+        console.log(result2);
+        document.write(result1.getInfo());
+        document.write(result1.getResult(),"<br>");            
+        document.write(result2.getInfo());
+        document.write(result2.getResult(),"<br>");  
+        document.write(result1.getResult === result2.getResult,"<br>");        
+    </script>
+</body>
+</html>

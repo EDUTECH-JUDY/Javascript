@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="main_body">
+    <script>
+        var back_color = ["white", "red", "yellow", "aqua", "purple"];
+        var i = 0;
+        function changeOfColor() {
+            i++;
+            if(i >= back_color.length) {
+                i = 0;
+            }
+            var mainbodyTag = document.getElementById("main_body");
+            mainbodyTag.style.backgroundColor = back_color[i];
+        }        
+    </script>
+    <button onclick="changeOfColor();">배경색 변경</button>
+</body>
+</html>
