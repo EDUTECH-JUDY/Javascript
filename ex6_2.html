@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var today = new Date();
+        var nowMonth = today.getMonth(),
+            nowDate = today.getDate(),
+            nowDay = today.getDay();
+        document.write("<h1>오늘 날짜</h1>");
+        document.write("월: " + nowMonth + " 일: " + nowDate + " 요일: " + nowDay,"<br>");
+
+        var birthday = new Date(2022,4,25);
+        var theMonth = birthday.getMonth()+1,
+            theDate = birthday.getDate(),
+            theDay = birthday.getDay();
+        document.write("<h1>2022년 생일</h1>");
+        document.write("월: " + theMonth +  " 일: " + theDate + " 요일: " + theDay,"<br>");
+    </script>
+</body>
+</html>

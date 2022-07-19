@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i = 6.3456;
+        var max = Math.max(100, 7, 9, 50),
+            min = Math.min(100, 7, 9, 50),
+            round1 = Math.round(i),
+            round2 = Math.round(i*10)/10,
+            round3 = Math.round(i*100)/100;
+            floor = Math.floor(i),
+            ceil = Math.ceil(i),
+            rnd = Math.random(),
+            pi = Math.PI;
+        document.write(max,"<br>");
+        document.write(min, "<br>");
+        document.write(round1,"<br>");
+        document.write(round2,"<br>");
+        document.write(round3,"<br>");
+        document.write(floor,"<br>");
+        document.write(ceil,"<br>");
+        document.write(rnd,"<br>");
+        document.write(pi,"<br>");
+    </script>
+
+    <script>
+        //Ceil(random()*(최대값-최소값)+최소값); 최소값~최대값
+        // 20 < random < 50        
+        var rnd = Math.floor(Math.random()*(50-20))+20;
+        document.write(rnd,"<br>");
+
+        // 1 < random < 100
+        var rnd = Math.floor(Math.random()*(100-1))+1;
+        document.write(rnd,"<br>");
+    </script>
+</body>
+</html>

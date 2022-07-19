@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+        document.write("<h1>가위, 바위, 보 게임</h1>");
+        var choose = prompt("가위, 바위, 보 중 선택하세요?", "보");
+        var i;
+        switch(choose) {
+            case "가위" : i = 1;
+            break;
+            case "보" : i = 2;
+            break;
+            case "바위" : i = 3;
+            break;
+            default : alert("다시 입력하세요.");
+            location.reload();
+        }
+        var rand = Math.ceil( Math.random() * 3 );
+        document.write("<img src =\"images/" + rand + ".jpg\">");
+        if(i == rand) {
+            document.write("<h1>맞추었습니다.</h1>");
+        }else {
+            document.write("<h1>틀렸습니다.</h1>");
+        }
+    </script> -->
+
+    <script>
+        document.write("<h1>가위, 바위, 보 게임</h1>");
+        var choose = prompt("가위, 바위, 보 중 선택하세요?", "보");
+        var i;        
+        switch(choose) {
+            case "가위" : i = 1;
+            break;
+            case "보" : i = 2;
+            break;
+            case "바위" : i = 3;
+            break;
+            default : alert("다시 입력하세요.");
+            location.reload();            
+        }
+        document.write("<img src =\"images/" + i + ".jpg\">");
+
+        var rand = Math.ceil( Math.random() * 3 );
+        document.write("<img src =\"images/" + rand + ".jpg\">");
+
+        if(i == 1 && rand == 2) {
+            document.write("<h1>사용자 승</h1>");
+        }else if(i == 1 && rand == 1) {
+            document.write("<h1>사용자 비김</h1>");
+        }else if(i == 1 && rand == 3) {
+            document.write("<h1>사용자 패</h1>");
+        }else if(i == 3 && rand == 1) {
+            document.write("<h1>사용자 승</h1>");  
+        }else if(i == 3 && rand == 3) {
+            document.write("<h1>사용자 비김</h1>");  
+        }else if(i == 3 && rand == 2) {
+            document.write("<h1>사용자 패</h1>");  
+        }else if(i == 2 && rand == 3) {
+            document.write("<h1>사용자 승</h1>");  
+        }else if(i == 2 && rand == 2) {
+            document.write("<h1>사용자 비김</h1>");  
+        }else {
+            document.write("<h1>사용자 패</h1>");  
+        }      
+        
+        // switch(i) {
+        //     case i == rand: 
+        //         document.write("<h1>사용자 비김</h1>");
+        //         break;
+        //     case i == 1 && rand == 2: 
+        //         document.write("<h1>사용자 승</h1>");
+        //         break;
+        //     case i == 1 && rand == 3: 
+        //         document.write("<h1>사용자 패</h1>"); 
+        //         break;
+        //     case i == 2 && rand == 1: 
+        //         document.write("<h1>사용자 패</h1>"); 
+        //         break;
+        //     case i == 2 && rand == 3: 
+        //         document.write("<h1>사용자 승</h1>");
+        //         break;
+        //     case i == 3 && rand == 1: 
+        //         document.write("<h1>사용자 승</h1>");
+        //         break;
+        //     case i == 3 && rand == 2: 
+        //         document.write("<h1>사용자 패</h1>"); 
+        //         break;
+        //     default:
+        //         document.write("다시 입력하세요.");
+        // }
+    </script>
+</body>
+</html>

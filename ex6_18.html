@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var info = navigator.userAgent.toLowerCase();
+        var ostype = null;
+        document.write(info);
+
+        if(info.indexOf('windows') >= 0) {
+            ostype = "window.jpg";
+        } else if(info.indexOf('macintosh') >= 0) {
+            ostype = "mac.jpg";
+        } else if(info.indexOf('iphone') >= 0) {
+            ostype = "iphone.jpg";
+        } else if(info.indexOf('android') >= 0) {
+            ostype = "android.jpg";
+        }
+        document.write("<img src=\"images/" + ostype + "\">", "<br>");
+        var scr = screen;
+        var scr_width = scr.width;
+        var scr_height = scr.height;
+        document.write("화면 너비:" + scr_width + "px", "<br>");
+        document.write("화면 높이:" + scr_height + "px", "<br>");
+    </script>
+</body>
+</html>

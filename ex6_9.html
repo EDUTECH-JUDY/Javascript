@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var t = "Hi buddy How have you been? Wish you Good Luck";
+        document.write(t.charAt(9), "<br>");//H
+        document.write(t.indexOf("you"), "<br>");//18
+        document.write(t.indexOf("you", 19), "<br>");//33 19번째 인덱스부터 찾아라, 2번째 you 위치 
+        document.write(t.lastIndexOf("you"),"<br>");//33 오른쪽부터 찾아 첫번째 you의 번호
+        document.write(t.lastIndexOf("you", 19),"<br>");//18 오른쪽부터 19번째 위치에서부터 앞으로 찾아라
+        document.write(t.match("Luck"),"<br>");//Luck
+        document.write(t.search("you"),"<br>");//18
+        document.write(t.substr(13, 5),"<br>");//have
+        document.write(t.substring(13, 17),"<br>");//have
+        document.write(t.replace("you", "me"),"<br>");//Hi buddy How have me been? Wish you Good Luck
+        document.write(t.toLowerCase(),"<br>");//hi buddy how have you been? wish you good luck
+        document.write(t.toUpperCase(),"<br>");//HI BUDDY HOW HAVE YOU BEEN? WISH YOU GOOD LUCK
+        document.write(t.length,"<br>");//  46
+        var s = t.split(" ");
+        document.write(s[0], "<br>");//HI
+        document.write(s[4], "<br>");//you
+        var str = "B";
+        var t = str.charCodeAt(0);
+        document.write(t, "<br>");//66
+        document.write(String.fromCharCode(66), "<br>");//8
+    </script>
+</body>
+</html>

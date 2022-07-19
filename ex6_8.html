@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var array1 = ["서울", "부산", "대구"];
+        var array2 = ["대전", "인천", "수원"];
+        array1.splice(2, 1, "제주", "강원도");//대구를 가리키고 대구 하나 삭제하면 서울, 부산이고 제주, 강원도 추가-->서울, 부산, 제주, 강원도
+        console.log(array1);
+        var data1 = array2.pop();
+        console.log(data1);//수원
+        console.log(array2);//대전, 인천
+        var data2 = array2.shift();//대전, 인천에서 첫번째인 대전 삭제-->인천  
+        console.log(data2);//대전
+        console.log(array2); //인천
+        array2.push(data2);
+        console.log(array2);//인천, 대전
+        array2.unshift(data1);        
+        console.log(array2);//수원, 인천, 대전
+    </script>
+</body>
+</html>

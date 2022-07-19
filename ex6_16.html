@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var i = 0;
+        var j = 100;
+        var add = setInterval(function() {
+            i++;
+            console.log("i: " + i);
+        }, 1000);
+        var sub = setInterval(function() {
+            j--;
+            console.log("j: " + j);
+        }, 1000);
+    </script>
+    <button onclick="clearInterval(add)">증가 정지</button>
+    <button onclick="clearInterval(sub)">감소 정지</button>
+</body>
+</html>
