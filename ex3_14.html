@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var name= prompt("당신의 이름은?","");
+    var eng = prompt("당신의 영어 성적은?","0");
+    var math = prompt("당신의 수학 성적은?","0");
+    var averge = (Number(eng)+Number(math)) / 2;
+    console.log(averge);
+    var result = averge >= 80;
+    result = (averge >= 80) ? "우수한 성적입니다." : "성적이 좋지 못합니다.";
+    document.write(name +"님 평균성적은 "+ result);
+    </script>   
+</body>
+</html>

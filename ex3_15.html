@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    var name= prompt("당신의 이름은?","");
+    var weight= prompt("당신의 몸무게(KG)는?","0");
+    var height = prompt("당신의 키(M)는?","0");
+    var bmi = Number(weight)/(Number(height) * Number(height));
+    
+    var result = bmi >= 25;  
+    
+    result = result ? "과체중입니다." : "정상체중입니다."
+    document.write(name +"님 BMI는 "+ result);   
+    
+    // var result = bmi;
+    // if(bmi < 18.5) {
+    //     result = "저체중입니다.";
+    // }
+    // else if(bmi >=18.5 && bmi <23){
+    //     result = "정상 체중입니다.";
+    // }   
+    // else if(bmi >=23 && bmi <25){
+    //     result = "과체중입니다.";
+    // }
+    // else if(bmi >=25 && bmi <30){
+    //     result = "비만입니다.";
+    // }
+    // else {
+    //     result = "고도비만입니다."
+    // }
+    // document.write(name +" 님은 "+ result);
+    </script>   
+</body>
+</html>
